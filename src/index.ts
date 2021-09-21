@@ -5,11 +5,6 @@ const app = express();
 
 app.use(express.json());
 
-const dynamodb = new AWS.DynamoDB({
-  endpoint: 'http://localhost:8000',
-  region: 'local',
-});
-
 const docClient = new AWS.DynamoDB.DocumentClient({
   endpoint: 'http://localhost:8000',
   region: 'local',
