@@ -1,9 +1,11 @@
 import express from 'express';
+import cors from 'cors';
 import AWS from 'aws-sdk';
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 const docClient = new AWS.DynamoDB.DocumentClient({
   endpoint: 'http://localhost:8000',
